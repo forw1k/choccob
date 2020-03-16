@@ -1,0 +1,59 @@
+.nav-mobile {
+
+    display: none;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    position: fixed;
+    top: -9999px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    &.active {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(47, 50, 52, 0.93);
+        top: 0;
+        bottom: 0;
+        transition: 0.5s;
+    }
+
+    .nav {
+
+        margin: 0 20px;
+    
+        &__list {
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        &__item {
+    
+            margin-bottom: 15px;
+            margin-right: 0;
+    
+            &-link {
+    
+                color: #ffffff;
+                font-size: 18px;
+    
+                &:hover {
+    
+                    text-decoration: underline #ffffff;
+                }
+            }
+    
+            &:last-child {
+    
+                margin-bottom: 0;
+            }
+        }
+    }
+}

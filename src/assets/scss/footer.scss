@@ -1,0 +1,89 @@
+.footer {
+
+    padding: 25px 0;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    color: #0f5a47;
+    height: 100px;
+
+    .svg-img--phone {
+
+        width: 12px;
+        height: 12px;
+        fill: #0f5a47;
+    }
+
+    @include phones {
+
+        padding: 10px 0;
+    }
+
+    .contacts__phone {
+
+        white-space: nowrap;
+        color: #0f5a47;
+    
+        &:hover {
+    
+            text-decoration: underline #0f5a47;
+        }
+    }
+
+    .adress {
+
+        color: #000000;
+    }
+
+    &__row {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col-right {
+
+        display: flex;
+    }
+
+    .socials__list {
+
+        display: flex;
+        align-items: center;
+    }
+
+    .socials__item {
+
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+    
+        &:first-child {
+
+            margin-left: 0;
+        }
+
+        &-link {
+
+            color: #000000;
+
+            &:hover {
+
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.socials__svg {
+
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0.5;
+
+    &:hover {
+
+        opacity: 1;
+        transition: 0.5s;
+    }
+}

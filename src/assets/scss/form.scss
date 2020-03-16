@@ -1,0 +1,70 @@
+.form__elem {
+
+    display: flex;
+    padding: 75px 0;
+
+    @include tablets {
+
+        flex-direction: column;
+    }
+
+    @include phones {
+
+        padding: 15px 0 0 0;
+    }
+}
+
+.form__column {
+
+    flex: 1;
+    margin-left: 20px;
+}
+
+.form__row {
+
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    @include phones {
+
+        margin-bottom: 10px;
+    }
+}
+
+.form__block {
+
+    flex: 1;
+    margin-right: 20px;
+    display: block;
+}
+
+.form__input {
+
+    background: #fff;
+    border-radius: 3px;
+    border: none;
+    height: 60px;
+    width: 100%;
+
+    @include phones {
+
+        height: 40px;
+    }
+
+    &--textarea {
+
+        resize: none;
+        height: 180px;
+
+        @include phones {
+
+            height: 100px;
+        }
+
+        @include oldPhones {
+
+            height: 40px;
+        }
+    }
+}

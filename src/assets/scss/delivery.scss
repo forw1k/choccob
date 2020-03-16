@@ -1,0 +1,143 @@
+.delivery {
+
+    height: 100vh;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    background: url('../img/order/order-background.png') center center / cover no-repeat;
+
+    &__container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include phones {
+
+        padding: 25px 0 0 0;
+    }
+
+    @include oldPhones {
+
+        padding: 10px;
+    }
+}
+
+.form__buttons {
+
+    margin-top: 10px;
+
+    @include tablets {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form__row {
+        
+        flex-wrap: nowrap;
+    }
+}
+
+.form__input {
+
+    padding: 10px;
+}
+
+.form__input {
+
+    border: 1px solid transparent;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 7px 15px;
+    width: 100%;
+}
+
+.form__radio, .form__checkbox {
+
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.form__radio-input, .form__checkbox-input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form__radio-fake {
+
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #0f5a47;
+    }
+}
+
+.form__radio-input:checked + .form__radio-fake::before {
+
+    width: 8px;
+    height: 8px;
+}
+
+.form__block-title--buttons {
+
+    margin-bottom: 0;
+    margin-left: 10px;
+}   
+
+.form__block-title {
+
+    font-family: 'alegreyasans-regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #0f5a47;
+
+    @include phones {
+
+        font-size: 16px;
+    }
+
+    @include oldPhones {
+
+        font-size: 14px;
+    }
+}  
+
+.form__checkbox-fake {
+
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    position: relative;
+}
+
+.form__checkbox-input:checked + .form__checkbox-fake::before {
+
+    content: "";
+    border: solid #0f5a47;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    width: 5px;
+    height: 11px;
+    left: 30%;
+    transform: translate(-50%, -50%); 
+    transform: rotate(45deg);
+}

@@ -1,0 +1,180 @@
+.reviews {
+
+    height: 100vh;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+
+    &__container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__title {
+
+        color: #000000;
+        font-size: 30px;
+        font-weight: 600;
+
+        @include tablets {
+
+            margin-bottom: 25px;
+        }
+
+        @include oldPhones {
+
+            margin-bottom: 10px;
+        }
+    }
+
+    &__name {
+
+        font-weight: 600;
+    }
+
+    &__block {
+
+        background: url('../img/reviews/reviews-background.png');
+        padding: 50px 0 35px 45px;
+        margin: 45px 0 20px 0;
+
+        @include tablets {
+
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 0;
+            margin: 0;
+        }
+
+        @include phones {
+
+            padding: 20px 0 0 0;
+        }
+
+        @include oldPhones {
+
+            padding: 0;
+        }
+    }
+
+    &__picture-img {
+
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    &__description {
+
+        display: none;
+
+        &.active {
+
+            display: flex;
+        }
+
+        @include tablets {
+
+            width: 100%;
+            flex-direction: column;
+        }
+
+        @include phones {
+
+            padding: 10px;
+        }
+    }
+
+    &__text {
+
+        @include tablets {
+
+            margin-bottom: 25px;
+        }
+
+        @include oldPhones {
+
+            margin-bottom: 10px;
+        }
+    }
+
+    &__info {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex: 3;
+
+        @include tablets {
+
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @include phones {
+
+            width: 100%;
+        }
+    }
+
+    &__picture {
+
+        display: flex;
+        flex: 1;
+        margin-right: 10px;
+
+        @include tablets {
+
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+
+        @include phones {
+
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    &__list {
+
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+
+        margin-left: 10px;
+        max-width: 70px;
+        max-height: 70px;
+        overflow: hidden;
+
+        @include phones {
+
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+        &:first-child {
+
+            margin-left: 0;
+        }
+
+        &-img {
+            
+            border-radius: 50%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        &.active {
+
+            border: 5px solid #0f5a47;
+            border-radius: 50%;
+        }
+    }
+}

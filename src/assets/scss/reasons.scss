@@ -1,0 +1,183 @@
+.reasons {
+
+    height: 100vh;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+
+    @include tablets {
+
+        padding: 55px 0 0 0;
+    }
+
+    @include oldPhones {
+
+        padding: 20px 0 0 0;
+    }
+
+    &__container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__list {
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 0 0 0;
+
+        @include tablets {
+
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    &__item {
+
+        flex: 1;
+        margin-left: 40px;
+
+        &:last-child {
+
+            margin-left: 0;
+        }
+
+        @include tablets {
+
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+
+        @include phones {
+
+            display: flex;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        @include oldPhones {
+
+            margin-bottom: 10px;
+        }
+    }
+
+    &__picture {
+
+    background-color: #f2f5f4;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+        @include phones {
+
+            margin-right: 20px;
+        }
+
+        @include oldPhones {
+
+            width: 90px;
+            height: 90px;
+        }
+    }
+
+    &__description {
+
+        margin: 30px 0 0 0;
+
+        @include tablets {
+
+            margin: 0 auto;
+            width: 70%;
+        }
+    }
+
+    &__title {
+
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 27px;
+
+        @include tablets {
+
+            margin: 10px 0 0 0;
+        }
+    }
+}
+
+.wherefore {
+
+    text-align: center;
+    width: 70%;
+    padding-bottom: 50px;
+
+    @include tablets {
+
+        width: 100%;
+    }
+
+    @include oldPhones {
+
+        padding-bottom: 15px;
+    }
+}
+
+.text-casual {
+
+    font-size: 18px;
+    color: #666666;
+
+    @include tablets {
+
+        font-size: 16px;
+    }
+}
+
+.section-title {
+
+    color: #000000;
+    text-transform: uppercase;
+
+    & h2 {
+
+        font-weight: 800;
+        font-size: 48px;
+        text-align: center;
+
+        @include phones {
+
+            font-size: 36px;
+        }
+    }
+
+    &--white {
+
+        color: #ffffff;
+        position: relative;
+        top: 5%;
+        left: 3%;
+    }
+
+    &.section-title--green {
+
+        color: #0f5a47;
+    }
+}
+
+.svg-img--reasons {
+
+    width: 65px;
+    height: 65px;
+    fill:none;
+    stroke:#000000;
+    stroke-width:0.75;
+    stroke-miterlimit:10;
+}
